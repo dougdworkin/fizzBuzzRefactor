@@ -25,8 +25,7 @@ $(document).ready(function () {
         var $inputRounded,
             $input = $('input#numberInput').val();
         $input = +$input;
-        console.log("number entered " + $input + " " + typeof $input);
-           
+               
         // Is it a number?
         if (!$input && $input !== 0) {
             $numberList.append('<em>Please type a number</em>');
@@ -35,6 +34,7 @@ $(document).ready(function () {
         } else if ($input <= 0) {
             $numberList.append('<em> Please enter a number greater than Zero</em>');
         
+        // is it it too tiny to work with?    
         } else if ($input <= .5 && $input > 0) {
             $numberList.append("<em>C'mon...really?? Try again :\) </em>");    
          
@@ -42,7 +42,7 @@ $(document).ready(function () {
         } else if ($input > 101) {
             $numberList.append('<em> Please enter a number less than 100</em>');        
                 
-        // Ok it's all good, round it and run fizzbuzz
+        // Ok it's all good, round it and then run fizzbuzz
         } else {
             $inputRounded = Math.round($input);
             if ($inputRounded < $input) {
