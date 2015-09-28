@@ -36,7 +36,7 @@ $(document).ready(function () {
             $numberList.append('<em> Please enter a number greater than Zero</em>');
         
         } else if ($input <= .5 && $input > 0) {
-            $numberList.append("<em>C'mon...really?? Try again </em>");    
+            $numberList.append("<em>C'mon...really?? Try again :\) </em>");    
          
         // is it more than 100?
         } else if ($input > 101) {
