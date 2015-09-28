@@ -18,31 +18,9 @@ $(document).ready(function () {
 		$input = +$input;
 		console.log("number entered " + $input + " " + typeof $input);
 
-		// Is it a number?
-		if (!$input && $input !== 0) {
-			$numberList.append('<em>Please type a number</em>');
-
-		// is it more than zero?
-		} else if ($input <= 0) {
-			$numberList.append('<em> Please enter a number greater than Zero</em>');
-
-		// is it more than 100?
-		} else if ($input > 101) {
-			$numberList.append('<em> Please enter a number less than 100</em>');
-
 		// Ok it's all good, round it and run fizzbuzz
-		} else {
-			$inputRounded = Math.round($input);
-			if ($inputRounded < $input) {
-				$numberList.append("Your number has been rounded down<br>\(It's your own fault for using a decimal\)"  + '<br><br>');
-				} else if($inputRounded > $input) {
-					$numberList.append("Your number has been rounded up<br>\(It's your own fault for using a decimal\)"  + '<br><br>');
-				} else {
-					$numberList.append('<b>Great Choice!</b>' + '<br><br>');
-				}
-//
-				runFizzBuzz($inputRounded);
-		}
+		$numberList.append('<b>Great Choice!</b>' + '<br><br>');
+		runFizzBuzz($input);
 	}
 
 	// Fiz Buzz the numbers up to user's # input
