@@ -1,0 +1,19 @@
+body {
+    font-family: arial, helvetica, sans-serif;
+}
+
+
+form#mainInput label,
+form#mainInput input#numberInput{
+    display: block;
+}
+
+form#mainInput input#numberInput {
+    margin-bottom: 1em;
+}
+
+p.fizzBuzzer em {
+    color:firebrick;
+    font-weight: 700;
+    font-style: normal;
+}
