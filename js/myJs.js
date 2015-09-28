@@ -4,21 +4,12 @@ $(document).ready(function () {
 	var $numberList = $('p.fizzBuzzer');
 
 	// adds Number if enter is pressed
-	function enterNumberTyped(event) {
-		if (event.keyCode === 13) {
-			$numberList.empty();
-			addNumber();
-			event.preventDefault();
-		}
-	}
+	function enterNumber(event) {
+		event.preventDefault();
 
-	// adds number if button is clicked
-	function enterNumberClicked() {
 		$numberList.empty();
 		addNumber();
-		event.preventDefault();
-		}
-
+	}
 
 	//checks if the input is a usable number
 	function addNumber() {
@@ -73,10 +64,7 @@ $(document).ready(function () {
 		}
 
 
-	// get the click event set up for the button
-	$('input.enter').on('click', enterNumberClicked);
-
-	// get the keypress event set up for the enter key
-	$('input#numberInput').on('keydown', enterNumberTyped);
+	// onsubmit (click/enter)
+	$('form').on('submit', enterNumber);
 
 });
